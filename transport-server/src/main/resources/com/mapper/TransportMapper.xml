@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.TransportMapper">
+  <resultMap id="BaseResultMap" type="com.entity.Transport">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="transporter" jdbcType="VARCHAR" property="transporter" />
+    <result column="transport_staut" jdbcType="BIT" property="transportStaut" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="order_context" jdbcType="VARCHAR" property="orderContext" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    order_id, transporter, transport_staut, user_id, order_context, create_time, update_time
+  </sql>
+</mapper>

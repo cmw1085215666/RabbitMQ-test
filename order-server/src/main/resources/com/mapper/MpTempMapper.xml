@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.MpTempMapper">
+  <resultMap id="BaseResultMap" type="com.entity.MpTemp">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="sent_status" jdbcType="BIT" property="sentStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    order_id, sent_staut, create_time, update_time
+  </sql>
+  
+  <update id="updateStatus" parameterType="string">
+    UPDATE t_mq_temp SET sent_status = 1 WHERE order_id = #{orderId}
+  </update>
+  
+</mapper>
