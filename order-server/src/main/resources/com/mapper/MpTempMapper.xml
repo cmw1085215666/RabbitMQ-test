@@ -14,7 +14,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    order_id, sent_staut, create_time, update_time
+    order_id, sent_status, create_time, update_time
   </sql>
   
   <update id="updateStatus" parameterType="string">

@@ -23,7 +23,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `t_mq_temp`;
 CREATE TABLE `t_mq_temp`  (
   `order_id` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '订单id',
-  `sent_stutas` tinyint(1) NULL DEFAULT 0 COMMENT '发送状态状态',
+  `sent_status` tinyint(1) NULL DEFAULT 0 COMMENT '发送状态状态',
   `create_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`order_id`) USING BTREE
